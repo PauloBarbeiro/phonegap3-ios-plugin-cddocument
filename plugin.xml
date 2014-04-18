@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
+    id="br.com.paulobarbeiro.cddocument"
+    version="0.1">
+    <name>CDDocument</name>   
+    <!-- ios -->
+    <platform name="ios">    
+        <config-file target="config.xml" parent="/*">
+            <feature name="CDDocument">
+                <param name="ios-package" value="CDDocument" /> 
+            </feature>
+        </config-file>
+        <js-module src="www/CDDocument.js" name="CDDocument">
+            <clobbers target="cdDocument" />
+        </js-module>
+        <header-file src="src/ios/CDDocument.h" />
+	    <source-file src="src/ios/CDDocument.m" />
+    </platform>
+</plugin>
